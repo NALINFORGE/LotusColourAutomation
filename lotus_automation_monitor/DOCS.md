@@ -1,22 +1,31 @@
-# Lotus Colour Automation 0.2.12
+# Lotus Colour Automation 0.2.13
 
-Lotus Colour Automation 0.2 ajoute les états d’exécution directement aux **interfaces natives Home Assistant** des automatisations et scripts. Depuis la 0.2.8, l’entrée latérale **Automatisations** ouvre directement la vue native Home Assistant au lieu d’afficher une interface Lotus séparée. La 0.2.10 ajoute le temps d’exécution des opérations terminées avec succès juste avant leur menu `⋮`. La 0.2.11 fiabilise l’initialisation automatique de la surcouche et agrandit les informations d’exécution. La 0.2.12 ajoute la nouvelle identité visuelle de l’add-on sans modifier le fonctionnement de la surcouche.
+Lotus Colour Automation 0.2 ajoute les états d’exécution directement aux **interfaces natives Home Assistant** des automatisations et scripts. Depuis la 0.2.8, l’entrée latérale **Automatisations** ouvre directement la vue native Home Assistant au lieu d’afficher une interface Lotus séparée. La 0.2.10 ajoute le temps d’exécution des opérations terminées avec succès juste avant leur menu `⋮`. La 0.2.11 fiabilise l’initialisation automatique de la surcouche et agrandit les informations d’exécution. La 0.2.12 ajoute la nouvelle identité visuelle de l’App. La 0.2.13 ajoute la distribution directe via un dépôt d’Apps Home Assistant sans modifier le fonctionnement de la surcouche.
 
-## Mise à jour depuis la v0.1
+## Installation depuis Home Assistant
 
-1. Arrêter **Lotus Colour Automation**.
-2. Remplacer le dossier `/addons/lotus_automation_monitor` par celui de la v0.2.12.
-3. Dans **Paramètres → Applications**, utiliser **Rechercher les mises à jour** si nécessaire.
-4. Mettre à jour puis démarrer **Lotus Colour Automation**.
-5. Au premier démarrage, l’application installe son compagnon frontend dans `/config/custom_components/lotus_automation_monitor`.
-6. Par défaut, elle sauvegarde `configuration.yaml`, puis ajoute :
+Une fois le dépôt GitHub rendu public :
+
+1. Ouvrir **Paramètres → Apps** dans Home Assistant.
+2. Ouvrir l’App Store puis la gestion des **Dépôts**.
+3. Ajouter le dépôt :
+   `https://github.com/NALINFORGE/LotusColourAutomation`
+4. Actualiser l’App Store si nécessaire.
+5. Installer **Lotus Colour Automation**.
+6. Démarrer l’App.
+7. Au premier démarrage, l’App installe son compagnon frontend dans `/config/custom_components/lotus_automation_monitor`.
+8. Par défaut, elle sauvegarde `configuration.yaml`, puis ajoute :
 
    ```yaml
    lotus_automation_monitor:
    ```
 
-7. **Redémarrer Home Assistant une seule fois** afin de charger le compagnon. Le redémarrage de la seule application n’est pas suffisant.
-8. Après le redémarrage, actualiser complètement le navigateur si la surcouche n’apparaît pas immédiatement.
+9. **Redémarrer Home Assistant une seule fois** afin de charger le compagnon. Le redémarrage de la seule App n’est pas suffisant.
+10. Après le redémarrage, actualiser complètement le navigateur si la surcouche n’apparaît pas immédiatement.
+
+### Mise à jour depuis une installation locale antérieure
+
+L’identifiant technique `lotus_automation_monitor` est conservé, mais une App installée depuis un dépôt GitHub possède un identifiant de dépôt différent d’une App installée localement. Avant migration, noter les options configurées et effectuer une sauvegarde Home Assistant.
 
 Le diagnostic d’installation reste disponible techniquement, mais l’entrée latérale n’ouvre plus ce panneau dans l’usage normal.
 

@@ -17,7 +17,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers import config_validation as cv
 
 DOMAIN = "lotus_automation_monitor"
-VERSION = "0.2.12"
+VERSION = "0.2.13"
 FRONTEND_DIR = Path(__file__).parent / "frontend"
 OVERLAY_FILE = FRONTEND_DIR / "overlay.js"
 BOOTSTRAP_FILE = FRONTEND_DIR / "bootstrap.js"

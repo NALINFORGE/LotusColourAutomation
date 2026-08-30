@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.13
+
+- Passage au format officiel **Home Assistant App Repository**.
+- Ajout de `repository.yaml` à la racine du dépôt.
+- Déplacement de l’App dans le dossier technique `lotus_automation_monitor`.
+- Ajout de l’URL du dépôt dans `config.yaml`.
+- Documentation d’installation directe depuis Home Assistant.
+- Conservation du slug, du domaine et des URL historiques `lotus_automation_monitor`.
+- Aucun changement fonctionnel de la surcouche par rapport à 0.2.12.
+
 ## 0.2.12
 
 - Adopte le nom public **Lotus Colour Automation** ; l’identifiant technique `lotus_automation_monitor` reste inchangé pour la compatibilité.

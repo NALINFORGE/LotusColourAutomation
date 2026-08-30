@@ -13,7 +13,7 @@ from typing import Any
 
 from aiohttp import ClientSession, ClientTimeout, WSMsgType, web
 
-VERSION = (Path("/VERSION").read_text(encoding="utf-8").strip() if Path("/VERSION").exists() else "0.2.12")
+VERSION = (Path("/VERSION").read_text(encoding="utf-8").strip() if Path("/VERSION").exists() else "0.2.13")
 PORT = 8099
 HA_API = "http://supervisor/core/api"
 HA_WS = "ws://supervisor/core/websocket"

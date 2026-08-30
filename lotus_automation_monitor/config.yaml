@@ -1,9 +1,10 @@
 name: "Lotus Colour Automation"
-version: "0.2.12"
+version: "0.2.13"
 slug: "lotus_automation_monitor"
 description: >-
   Ajoute une surcouche d'état aux listes et éditeurs natifs des automatisations
   et scripts Home Assistant, avec suivi des exécutions et erreurs.
+url: "https://github.com/NALINFORGE/LotusColourAutomation"
 arch:
   - aarch64
   - amd64

@@ -1,8 +1,8 @@
-/* Lotus Colour Automation 0.2.12 - native Home Assistant overlay (single-file runtime) */
+/* Lotus Colour Automation 0.2.13 - native Home Assistant overlay (single-file runtime) */
 (() => {
   "use strict";
 
-  const VERSION = "0.2.12";
+  const VERSION = "0.2.13";
     const TRACE_REFRESH_MS = 2000;
   const REGISTRY_REFRESH_MS = 30000;
   const DECORATE_MS = 650;

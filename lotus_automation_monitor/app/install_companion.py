@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-VERSION = (Path("/VERSION").read_text(encoding="utf-8").strip() if Path("/VERSION").exists() else "0.2.12")
+VERSION = (Path("/VERSION").read_text(encoding="utf-8").strip() if Path("/VERSION").exists() else "0.2.13")
 DOMAIN = "lotus_automation_monitor"
 SOURCE = Path("/companion/custom_components") / DOMAIN
 HA_CONFIG = Path("/homeassistant")
