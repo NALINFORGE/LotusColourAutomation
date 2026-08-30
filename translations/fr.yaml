@@ -1,0 +1,16 @@
+configuration:
+  refresh_interval:
+    name: "Intervalle d’actualisation"
+    description: "Fréquence de rafraîchissement du panneau de diagnostic, en secondes."
+  show_disabled:
+    name: "Afficher les automatisations désactivées"
+    description: "Affiche également les automatisations dont l’état est désactivé dans le panneau de diagnostic."
+  long_running_seconds:
+    name: "Seuil d’exécution longue"
+    description: "Durée en secondes au-delà de laquelle une exécution est signalée comme longue dans le panneau de diagnostic."
+  install_native_overlay:
+    name: "Installer la surcouche native"
+    description: "Installe le compagnon frontend qui ajoute les états En cours et Erreur aux pages natives Automatisations et Scripts."
+  auto_register_frontend:
+    name: "Enregistrer automatiquement le compagnon"
+    description: "Ajoute automatiquement lotus_automation_monitor: à configuration.yaml après en avoir créé une sauvegarde."

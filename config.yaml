@@ -1,0 +1,36 @@
+name: "Lotus Colour Automation"
+version: "0.2.12"
+slug: "lotus_automation_monitor"
+description: >-
+  Ajoute une surcouche d'état aux listes et éditeurs natifs des automatisations
+  et scripts Home Assistant, avec suivi des exécutions et erreurs.
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+stage: experimental
+ingress: true
+ingress_port: 8099
+ingress_stream: true
+panel_icon: "mdi:robot"
+panel_title: "Automatisations"
+panel_admin: true
+homeassistant_api: true
+hassio_api: false
+map:
+  - type: homeassistant_config
+    read_only: false
+options:
+  refresh_interval: 2
+  show_disabled: true
+  long_running_seconds: 60
+  install_native_overlay: true
+  auto_register_frontend: true
+schema:
+  refresh_interval: "int(1,30)"
+  show_disabled: bool
+  long_running_seconds: "int(10,86400)"
+  install_native_overlay: bool
+  auto_register_frontend: bool

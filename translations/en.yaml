@@ -1,0 +1,16 @@
+configuration:
+  refresh_interval:
+    name: "Refresh interval"
+    description: "Diagnostic panel refresh frequency in seconds."
+  show_disabled:
+    name: "Show disabled automations"
+    description: "Also display disabled automations in the diagnostic panel."
+  long_running_seconds:
+    name: "Long-running threshold"
+    description: "Duration in seconds before a running execution is flagged as long-running in the diagnostic panel."
+  install_native_overlay:
+    name: "Install native overlay"
+    description: "Installs the frontend companion that adds Running and Error states to the native Automations and Scripts pages."
+  auto_register_frontend:
+    name: "Automatically register companion"
+    description: "Automatically adds lotus_automation_monitor: to configuration.yaml after creating a backup."

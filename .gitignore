@@ -1,0 +1,30 @@
+# Visual Studio / editors
+.vs/
+*.user
+*.suo
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments / secrets
+.env
+.env.*
+secrets.yaml
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local build/release artifacts
+*.zip
+*.tar
+*.tar.gz
+*.tgz

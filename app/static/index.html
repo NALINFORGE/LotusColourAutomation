@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Lotus Colour Automation</title>
+  <link rel="stylesheet" href="./static/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Automatisations</h1>
+      <p class="subtitle">Diagnostic technique Lotus Colour Automation</p>
+    </div>
+    <div class="connection" id="connection">
+      <span class="connection-dot"></span>
+      <span id="connectionText">Connexion…</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="metrics" aria-label="Résumé">
+      <button class="metric" data-filter="all"><strong id="countTotal">–</strong><span>Total</span></button>
+      <button class="metric metric-running" data-filter="running"><strong id="countRunning">–</strong><span>En cours</span></button>
+      <button class="metric metric-error" data-filter="error"><strong id="countErrors">–</strong><span>Erreurs</span></button>
+      <button class="metric" data-filter="automation"><strong id="countAutomations">–</strong><span>Automatisations</span></button>
+      <button class="metric" data-filter="script"><strong id="countScripts">–</strong><span>Scripts</span></button>
+    </section>
+
+    <section id="nativeOverlayStatus" class="native-overlay-status hidden" role="status"></section>
+    <section id="warningBox" class="warning-box hidden" role="status"></section>
+
+    <section class="toolbar">
+      <label class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Rechercher une automatisation ou un script…" autocomplete="off">
+      </label>
+      <div class="filters" role="group" aria-label="Filtres">
+        <button class="filter active" data-filter="all">Tous</button>
+        <button class="filter" data-filter="automation">Automatisations</button>
+        <button class="filter" data-filter="script">Scripts</button>
+        <button class="filter" data-filter="running">En cours</button>
+        <button class="filter" data-filter="error">Erreurs</button>
+      </div>
+    </section>
+
+    <section id="list" class="item-list" aria-live="polite"></section>
+    <div id="emptyState" class="empty hidden">Aucun élément ne correspond au filtre.</div>
+  </main>
+
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <div id="detailDomain" class="detail-domain"></div>
+        <h2 id="detailTitle">Détail</h2>
+        <div id="detailEntity" class="detail-entity"></div>
+      </div>
+      <button id="closeDrawer" class="icon-button" aria-label="Fermer">×</button>
+    </div>
+
+    <div class="drawer-body">
+      <section id="currentSummary" class="current-summary"></section>
+
+      <section class="detail-section">
+        <div class="section-title-row">
+          <h3>Exécutions récentes</h3>
+          <span id="traceCount" class="muted"></span>
+        </div>
+        <div id="runHistory" class="run-history"></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="section-title-row">
+          <h3>Étapes de la trace</h3>
+          <span id="traceState" class="muted"></span>
+        </div>
+        <div id="traceError" class="trace-error hidden"></div>
+        <div id="steps" class="steps"></div>
+        <div id="noTrace" class="empty-detail hidden">Aucune trace disponible pour cette exécution.</div>
+      </section>
+    </div>
+  </aside>
+  <div id="scrim" class="scrim hidden"></div>
+
+  <script src="./static/app.js" defer></script>
+</body>
+</html>

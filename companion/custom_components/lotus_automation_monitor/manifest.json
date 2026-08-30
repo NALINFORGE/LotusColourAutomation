@@ -1,0 +1,9 @@
+{
+  "domain": "lotus_automation_monitor",
+  "name": "Lotus Colour Automation",
+  "version": "0.2.12",
+  "dependencies": [
+    "frontend"
+  ],
+  "codeowners": []
+}
